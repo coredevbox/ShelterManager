@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shelter Manager</title>
+
+    <!-- Separate CSS file -->
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__title">Shelter Manager</div>
+          <div class="brand__subtitle">Prototype UI (text HUD)</div>
+        </div>
+
+        <div class="topbar__meta" id="top-meta">
+          <!-- optional: render day/hour here later -->
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel panel--status">
+          <div class="panel__header">
+            <h2 class="panel__title">Status</h2>
+            <div class="panel__hint">Live state snapshot</div>
+          </div>
+
+          <div id="status" class="status"></div>
+        </section>
+
+        <section class="panel panel--actions">
+          <div class="panel__header">
+            <h2 class="panel__title">Actions</h2>
+            <div class="panel__hint">Choose what to do next</div>
+          </div>
+
+          <div class="actions">
+            <button type="button" id="btn-status" class="btn btn--ghost">
+              Refresh status
+            </button>
+
+            <button type="button" id="btn-find-food" class="btn">
+              Find food <span class="btn__meta">(2h)</span>
+            </button>
+
+            <button type="button" id="btn-find-wood" class="btn">
+              Find firewood <span class="btn__meta">(1.5–2h)</span>
+            </button>
+            <button type="button" id="btn-rest" class="btn">
+              Rest <span class="btn__meta">(1h)</span>
+            </button>
+            <button type="button" id="btn-eat" class="btn">Eat</button>
+          </div>
+
+          <div class="footer-note">
+            Tip: keep these buttons dumb for now—just call your systems and
+            re-render.
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>

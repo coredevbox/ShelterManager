@@ -1,0 +1,29 @@
+This is an event-driven simulation engine written in pure JavaScript.
+
+It represents a shelter management, game-like simulator where a player must take actions and try to survive until rescue arrives (or not).
+
+The player has the following stats:
+
+* **Health points**, which are hidden from the player and can only be inferred through text messages or environmental feedback.
+* **Fatigue**, which can be reset through rest or sleep. Fatigue is consumed during activities.
+* **Hunger**, which increases over the course of any activity and can be reduced by eating.
+
+The player has an inventory:
+
+* food
+* wood
+
+Time is represented in days and hours. The minimum action duration is 1 hour.
+
+The world has:
+
+* **Outside temperature**: if it is lower than 10 degrees, health continuously decreases without a campfire.
+* **Shelter temperature**: the shelter adds +5 degrees to the outside temperature.
+* **Weather**:
+
+  * clear - no effects
+  * rain - causes additional fatigue and lowers temperature
+
+The campfire has:
+
+* **Intensity**, from 0 to 100. At 0, it is extinguished and produces no heat. Higher intensity provides more heat. During the night, having a campfire is necessary to scare off predators.
